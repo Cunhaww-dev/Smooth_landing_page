@@ -73,8 +73,8 @@ export default function LoadingOverlay() {
               left: ["-10%", "120%"],
             }}
             transition={{
-              duration: 2.5,
-              delay: i * 0.1,
+              duration: 1.5,
+              delay: i * 0.2,
               ease: "easeOut",
             }}
           />
