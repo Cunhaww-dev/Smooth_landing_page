@@ -1,6 +1,5 @@
 // src/components/footer.tsx
 
-import React from "react";
 import { Link } from "@tanstack/react-router";
 
 export default function Footer() {

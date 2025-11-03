@@ -2,13 +2,13 @@
 
 import { createFileRoute } from "@tanstack/react-router";
 import TrustLogos from "../components/trustLogos";
-import StickyPanel from "../components/StickyPanel";
-import LoadingOverlay from "../components/LoadingOverlay";
 import HorizontalScrollCards from "../components/horizontalScroll";
+import LoadingOverlay from "../components/loadingOverlay";
+import StickyPanel from "../components/stickyPanel";
 
 function Hero() {
   return (
-    <section className="relative flex h-screen items-center justify-center overflow-hidden bg-gradient-to-b from-zinc-50 to-zinc-100 text-zinc-900">
+    <section className="relative flex h-screen items-center justify-center overflow-hidden bg-linear-to-b from-zinc-50 to-zinc-100 text-zinc-900">
       {/* Shadow SVG (já está em /shadowBackground.svg) */}
       <div
         className="absolute inset-0 bg-no-repeat bg-center bg-cover opacity-60 mix-blend-multiply pointer-events-none"
