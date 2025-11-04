@@ -1,3 +1,6 @@
+import { ChevronDown } from 'lucide-react'
+import { Typography } from './ui/typography'
+
 export default function Hero() {
   return (
     <main className="relative flex h-screen items-center justify-center overflow-hidden bg-linear-to-b from-zinc-50 to-zinc-100 text-zinc-900">
@@ -13,16 +16,20 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-0 mask-[radial-gradient(90%_70%_at_50%_50%,black_60%,transparent_100%)] bg-[radial-gradient(120%_80%_at_50%_50%,rgba(0,0,0,0.08),transparent_60%)]" />
 
       <section className="relative z-10 mx-auto max-w-5xl px-6 text-center">
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-tight leading-tight">
+        <Typography
+          as="h1"
+          variant="display"
+          className="sm:text-6xl lg:text-7xl leading-tight tracking-tight font-semibold text-zinc-950"
+        >
           Seu site é a extensão digital
           <br className="hidden sm:block" />
           <span className="inline-block"> da sua marca </span>
-        </h1>
+        </Typography>
 
-        <p className="mx-auto mt-6 max-w-2xl text-base sm:text-lg text-zinc-600">
+        <Typography variant="subtitle">
           Transforme sua marca, libere o poder do digital conosco e transforme
           visões ousadas em sucesso no mercado
-        </p>
+        </Typography>
 
         <ul className="mx-auto mt-10 flex items-center justify-center gap-6 text-xs font-medium tracking-wider text-zinc-700">
           <li className="relative pl-4">
@@ -54,7 +61,14 @@ export default function Hero() {
             APPS
           </li>
         </ul>
+
+        <div className="absolute top-125 left-1/2 -translate-x-1/2">
+          <button className="flex items-center gap-2 px-6 py-2 rounded-full bg-zinc-900 text-zinc-50 text-sm font-medium hover:bg-zinc-800 transition-colors">
+            Role para descobrir
+            <ChevronDown className="w-4 h-4" />
+          </button>
+        </div>
       </section>
     </main>
-  );
+  )
 }
