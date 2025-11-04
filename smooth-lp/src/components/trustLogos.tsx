@@ -1,28 +1,28 @@
-"use client";
-import { useEffect, useState } from "react";
-import Logo from "./ui/logo";
-import "./trustLogo.css";
+'use client'
+import { useEffect, useState } from 'react'
+import Logo from './ui/logo'
+import './trustLogo.css'
 
 const baseLogos = [
-  "React",
-  "Vite",
-  "TanStack Router",
-  "Tailwind",
-  "pnpm",
-  "Biome",
-  "Lucide-react",
-  "Tailwind-variants",
-  "Framer-Motion",
-  "GSAP",
-];
+  'React',
+  'Vite',
+  'TanStack Router',
+  'Tailwind',
+  'pnpm',
+  'Biome',
+  'Lucide-react',
+  'Tailwind-variants',
+  'Framer-Motion',
+  'GSAP',
+]
 
 export default function TrustLogos() {
-  const [isClient, setIsClient] = useState(false);
+  const [isClient, setIsClient] = useState(false)
 
-  useEffect(() => setIsClient(true), []);
+  useEffect(() => setIsClient(true), [])
 
   // duplicar várias vezes garante continuidade visual sem “salto”
-  const allLogos = [...baseLogos, ...baseLogos, ...baseLogos, ...baseLogos];
+  const allLogos = [...baseLogos, ...baseLogos, ...baseLogos, ...baseLogos]
 
   // escolha a velocidade aplicando a classe .marquee-40 (ou 20/30/60, etc.)
   return (
@@ -35,7 +35,7 @@ export default function TrustLogos() {
         <div className="overflow-hidden">
           <div
             className={`marquee-content flex gap-8 w-max ${
-              isClient ? "running" : ""
+              isClient ? 'running' : ''
             }`}
           >
             {allLogos.map((logo, i) => (
@@ -48,5 +48,5 @@ export default function TrustLogos() {
         <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l from-black to-transparent" />
       </div>
     </section>
-  );
+  )
 }
