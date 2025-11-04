@@ -1,17 +1,16 @@
 // src/routes/index.tsx
 
-import { createFileRoute } from "@tanstack/react-router";
-import TrustLogos from "../components/trustLogos";
-import HorizontalScrollCards from "../components/horizontalScroll";
-import LoadingOverlay from "../components/loadingOverlay";
-import StickyPanel from "../components/stickyPanel";
-import Hero from "../components/hero";
+import { createFileRoute } from '@tanstack/react-router'
+import TrustLogos from '../components/trustLogos'
+import HorizontalScrollCards from '../components/horizontalScroll'
+import LoadingOverlay from '../components/loadingOverlay'
+import StickyPanel from '../components/stickyPanel'
+import Hero from '../components/hero'
+import Intro from '../components/intro'
 
-
-
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute('/')({
   component: RouteComponent,
-});
+})
 
 function RouteComponent() {
   return (
@@ -19,13 +18,11 @@ function RouteComponent() {
       <LoadingOverlay />
       <Hero />
       <TrustLogos />
-      <StickyPanel
-        zIndex={1}
-        bgColor="bg-gradient-to-br from-indigo-800 to-purple-900"
-        title="Painel 1"
-      >
-        <p>Eu sou a primeira seção. Role para baixo.</p>
+
+      <StickyPanel zIndex={1} className="w-full" height="h-screen" fullBleed>
+        <Intro embed />
       </StickyPanel>
+
       <StickyPanel
         zIndex={2}
         bgColor="bg-gradient-to-br from-teal-500 to-cyan-600"
@@ -55,5 +52,5 @@ function RouteComponent() {
         <HorizontalScrollCards />
       </div>
     </main>
-  );
+  )
 }
